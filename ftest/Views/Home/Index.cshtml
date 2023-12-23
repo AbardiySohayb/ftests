@@ -1,0 +1,309 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+
+
+@{
+    Layout = null;
+}
+@{
+    ViewData["Title"] = "Home Page";
+}<html>
+  <head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <title>BonProf</title>
+    <link rel="shortcut icon" href="image/logonav.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!--StartNav-->
+    <header>
+      <div class="containerNav">
+        <div class="containerNav2">
+          <div class="Brand">
+                    <a href="#"><img src="~/image/logonav.png" id="logo" /></a>
+          </div>
+          <nav class="nav">
+            <ul>
+              <li class="active">
+                <a href="..\homePage\index.html">Home</a>
+              </li>
+
+              <li class="active">
+                            <a  asp-area="Identity" asp-page="/Account/Register">S'inscrire</a>
+              </li>
+              <li class="active">
+                            <a asp-area="Identity" asp-page="/Account/Login">Se connecter</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--EndNav-->
+    <div class="pic">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 43.1 85.9"
+        style="enable-background: new 0 0 43.1 85.9"
+        xml:space="preserve"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="st0 draw-arrow"
+          d="M11.3,2.5c-5.8,5-8.7,12.7-9,20.3s2,15.1,5.3,22c6.7,14,18,25.8,31.7,33.1"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="draw-arrow tail-1"
+          d="M40.6,78.1C39,71.3,37.2,64.6,35.2,58"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="draw-arrow tail-2"
+          d="M39.8,78.5c-7.2,1.7-14.3,3.3-21.5,4.9"
+        />
+      </svg>
+      <button id="btnAdd" type="button">
+            <a  asp-area="Identity" asp-page="/Account/Register">S'inscrire</a>
+      </button>
+    </div>
+    <!--EndHeader-->
+    <!--StartContainer1-->
+    <div class="container1 hidden">
+      <div class="image">
+        <img src="../image/students_09.jpg" id="photoDeBase" />
+      </div>
+      <div class="t1">
+        <h1>
+          “Ne laissez pas les demandes des professeurs vous faire oublier vos
+          droits”
+        </h1>
+      </div>
+    </div>
+    <br />
+    <!--EndContainer1-->
+    <br />
+    <div class="t2">
+      <h2>Pourquoi nous sommes les meilleurs</h2>
+    </div>
+    <!--StartContainer2-->
+    <div class="container2 animated-on-scroll">
+      <section class="section1">
+        <div class="elemrnt 1">
+          <img src="..\image\enseignants-passionnes.png" id="image1" />
+        </div>
+        <span class="text1">
+          <h3>Solution conçue par des enseignants passionnés</h3>
+          <p class="corp1">
+            Plus besoin d'apprendre par cœur... Tu vas comprendre tes cours en
+            toute facilité grâce à la pédagogie ludique et efficace de nos
+            professeurs.
+          </p>
+        </span>
+      </section>
+      <section class="section2">
+        <div class="elemrnt 2">
+          <img src="..\image\contenu-conforme-au-referentiel.png" id="image2" />
+        </div>
+        <div class="text2">
+          <h3>Contenus conformes au référentiel du ministère</h3>
+          <p class="corp2">
+            Contenus encadrés et vérifiés par des enseignants agrégés, en
+            parfait accord avec le programme officiel de l’Éducation nationale.
+          </p>
+        </div>
+      </section>
+      <section class="section3">
+        <div class="elemrnt 3">
+          <img src="..\image\contenu-complet.png" id="image3" />
+        </div>
+        <span class="text3">
+          <h3>Expérience d’apprentissage complète accessible 24/24</h3>
+          <p class="corp3">
+            Vidéos, fiches de cours, exercices, quiz, annales… Le tout
+            accessible 24/24, 7j/7, pour apprendre en toute liberté​ sur PC ou
+            sur notre application mobile.
+          </p>
+        </span>
+      </section>
+    </div>
+    <br />
+
+    <br />
+    <!--EndContainer2-->
+    <br />
+    <!--StartContainer3-->
+    <br />
+    <div class="container3 hidden">
+      <div class="element">
+        <img src="..\image\premium-online.png" id="image4" />
+      </div>
+      <div class="t3">
+        <h1>L'ÉDUCATION AU BOUT DES DOIGTS</h1>
+        <p>
+          BonProf est une platforme de les étudiants qui recherchent un soutien
+          scolaire en dehors de leur programme scolaire habituel. Il met en
+          relation les étudiants avec des enseignants expérimentés et qualifiés
+          qui peuvent leur offrir une assistance personnalisée pour les aider à
+          améliorer leur compréhension et leurs performances dans diverses
+          matières. BonProf propose un large éventail de matières et de sujets,
+          notamment les mathématiques, les sciences, les arts du langage et les
+          études sociales, entre autres. Les étudiants peuvent parcourir la
+          liste des enseignants disponibles et choisir celui qui correspond le
+          mieux à leurs besoins.
+        </p>
+        <button class="button" type="submit">Créer un compte</button>
+      </div>
+    </div>
+    <br />
+
+    <br />
+    <!--EndContainer3-->
+    <!--StartContainer4-->
+    <br />
+    <section class="container4 animated-on-scroll">
+      <section class="element4">
+        <div class="icone1">
+          <br />
+          <i class="fa fa-book" aria-hidden="true"></i>
+        </div>
+        <div class="textIcone1">
+          <p>20 Millions Page par Mois</p>
+        </div>
+      </section>
+      <section class="element5">
+        <div class="icone2">
+          <br />
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="textIcone2">
+          <p>35 Millions Visite par Année</p>
+        </div>
+      </section>
+      <section>
+        <div class="icone3">
+          <br />
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
+        </div>
+        <div class="textIcone3">
+          <p>100 Milles Visite par Jour</p>
+        </div>
+      </section>
+    </section>
+    <br />
+
+    <!--EndContainer4-->
+    <br />
+    <br />
+    <br />
+    <br /><br />
+    <br />
+    <br />
+    <br />
+    <br /><br />
+    <br />
+
+    <section id="footer1">
+      <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4 class="t4">Qui sommes-nous?</h4>
+            <p>
+              <i class="fa fa-angle-double-right"></i>
+              BonProf connecte les étudiants à des enseignants qualifiés pour un
+              soutien scolaire personnalisé. Améliorez vos performances dans
+              diverses matières telles que les mathématiques, les sciences et
+              les arts du langage. Trouvez l'enseignant adapté à vos besoins et
+              progressez avec BonProf
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Nos Lien</h5>
+            <ul class="list-unstyled quick-links">
+              <li>
+                            <a href="javascript:void();"><i class="fa fa-angle-double-right"></i><a  asp-area="Identity" asp-page="/Account/Register">S'inscrire</a></a>
+              </li>
+              <li>
+                            <a href="javascript:void();"><i class="fa fa-angle-double-right"></i><a asp-area="Identity" asp-page="/Account/Login">Se connecter</a></a>
+              </li>
+              <li>
+                <a href="javascript:void();"
+                  ><i class="fa fa-angle-double-right"></i>Accueil</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Contactez nous</h5>
+            <ul class="list-unstyled quick-links">
+              <li>
+                <a href="javascript:void();"
+                  ><i class="fa fa-envelope"></i>BonProf@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="javascript:void();"
+                  ><i class="fa fa-phone-square"></i>0712458596</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+              <li class="list-inline-item">
+                <a href="javascript:void();"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:void();"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:void();"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:void();"
+                  ><i class="fa fa-google-plus"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:void();" target="_blank"
+                  ><i class="fa fa-envelope"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--EndFooter-->
+    <script defer src="~/js/site.js"></script>
+  </body>
+</html>

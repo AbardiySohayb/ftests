@@ -1,0 +1,80 @@
+﻿@model ftest.Models.Total
+
+@{
+    ViewData["Title"] = "Dashboard";
+} 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mb-4 animate__animated animate__fadeIn">Tableau de bord</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card bg-info text-white mb-4 animate__animated animate__fadeInLeft">
+                    <div class="card-body">
+                        <h3 class="card-title">Total des étudiants</h3>
+                        <p class="card-text display-4 animate__animated animate__pulse">@Model.TotalEtudiants</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card bg-success text-white mb-4 animate__animated animate__fadeInRight">
+                    <div class="card-body">
+                        <h3 class="card-title">Total des professeurs</h3>
+                        <p class="card-text display-4 animate__animated animate__pulse">@Model.TotalProfesseurs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

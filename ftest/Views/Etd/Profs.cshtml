@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ftest.Models.Prof>
+
+@{
+    ViewData["Title"] = "Professeurs associés à l'étudiant";
+}
+
+<h1>Professeurs associés à l'étudiant</h1>
+
+@if (Model.Any())
+{
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nom)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prenom)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prenom)
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Aucun professeur associé à cet étudiant.</p>
+}

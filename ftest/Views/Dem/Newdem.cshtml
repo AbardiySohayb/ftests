@@ -1,0 +1,34 @@
+﻿@model ftest.Models.Dem
+
+@{
+    ViewData["Title"] = "Newdem";
+}
+
+
+<h1>Newdem</h1>
+
+@using (Html.BeginForm("Newdem", "Dem", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <label for="EtdNom">Nom de l'étudiant :</label>
+        @Html.TextBoxFor(model => model.EtdNom, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="ProfNom">Nom du professeur :</label>
+        @Html.TextBoxFor(model => model.ProfNom, new { @class = "form-control" })
+    </div>
+
+    <!-- Ajoutez un champ pour le fichier image -->
+    <div class="form-group">
+        <label for="ImageFile">votre reçu :</label>
+        <input type="file" name="ImageFile" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+}
+
+
+
+
+

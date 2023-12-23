@@ -1,0 +1,33 @@
+﻿@model ftest.Models.Prof
+@{
+    ViewData["Title"] = "Hip";
+}
+
+
+
+
+@if (Model != null)
+{
+    <div>
+       
+        <h1>Bonjour @Model.Prenom</h1>
+        <a href="../Etd/ListeEtd"><button>Ajouter</button></a>
+      
+        <!-- Ajoutez d'autres propriétés selon votre modèle -->
+    </div>
+}
+else
+{
+    <p>Aucun élément à afficher.</p>
+}
+
+
+   
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ftest.Models.Prof>
+@{
+    ViewData["Title"] = "or";
+}
+
+@using (Html.BeginForm("RechercherEtudiantParProfesseur", "Etudiant", FormMethod.Post))
+{
+    <label for="Matiere">Matiere:</label>
+    <input type="text" id="Matiere" name="Matiere" />
+    <input type="submit" value="Rechercher" />
+
+    <table>
+        <tr>
+           
+            <th>Nom</th>
+            <th>Prenom</th>
+            <!-- Ajoutez d'autres colonnes au besoin -->
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+            
+                <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Prenom)
+                </td>
+               
+            </tr>
+        }
+    </table>
+}
+

@@ -1,0 +1,80 @@
+﻿.column1 {
+    background: #bde0fe;
+    float: left;
+    width: 40%;
+    height: 743px;
+}
+
+.column2 {
+    background: #f8f7f9;
+    float: left;
+    width: 60%;
+    height: 743px;
+}
+
+* {
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+}
+
+#img1 {
+    mix-blend-mode: multiply;
+    height: 150px;
+    width: 200px;
+}
+
+#img2 {
+    mix-blend-mode: multiply;
+    height: 500px;
+    width: 500px;
+}
+
+.text {
+    color: #000;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.content-boxChoix {
+    padding: auto;
+    height: 700;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+    border-radius: 40px;
+    background-color: #bde0fe;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16);
+}
+
+h2 {
+    color: #2b2d42;
+    font-size: 40px;
+}
+
+.Choix input {
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 60px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    font-size: 0.9;
+    box-shadow: 5px 5px 5px -1px rgba(10, 99, 169, 0.16);
+    background-color: #2b2d42;
+    color: #f8f7f9;
+}
+
+.Choix :hover {
+    color: #92dce5;
+    cursor: pointer;
+    timeline-scope: 0.3s;
+}
+
+.Choix input {
+    font-size: 20px;
+}

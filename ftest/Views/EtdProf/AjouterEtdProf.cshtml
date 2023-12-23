@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "AjouterEtdProf";
+}
+
+<h1>AjouterEtdProf</h1>
+
+@model ftest.Models.AjoutEtdProfViewModel
+
+@using (Html.BeginForm("AjouterEtdProf", "EtdProf", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="EtdId">Sélectionnez un étudiant :</label>
+        @Html.DropDownListFor(model => model.EtdId, new SelectList(Model.Etudiants, "Id","Nom"), "Sélectionnez un étudiant", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="ProfId">Sélectionnez un professeur :</label>
+        @Html.DropDownListFor(model => model.ProfId, new SelectList(Model.Professeurs, "Id","Nom"), "Sélectionnez un professeur", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+}

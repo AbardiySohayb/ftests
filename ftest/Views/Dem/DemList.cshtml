@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ftest.Models.Dem>
+@{
+    ViewData["Title"] = "Liste des Dem";
+}
+
+<style>
+    .zoomable-image {
+        max-width: 200px;
+        max-height: 200px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+        .zoomable-image:hover {
+            transform: scale(4);
+            z-index: 1;
+        }
+</style>
+
+<h1>Liste des Dem</h1>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>Nom de l'étudiant</th>
+                <th>Nom du professeur</th>
+                <th>reçu</th>
+         
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dem in Model)
+            {
+                <tr>
+                   
+                    <td>@dem.EtdNom</td>
+                    <td>@dem.ProfNom</td>
+                    <td>
+                        @if (dem.ImageData != null && dem.ImageData.Length > 0)
+                        {
+                            <img src="data:image/png;base64,@Convert.ToBase64String(dem.ImageData)" alt="Image" class="zoomable-image" />
+                        }
+                        else
+                        {
+                            <p>Aucune image</p>
+                        }
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Aucun enregistrement trouvé.</p>
+}
